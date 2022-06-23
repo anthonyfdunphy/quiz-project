@@ -11,16 +11,16 @@ The user will be brought to a homepage which will give the user the option to st
 
 *This is placeholder text until the site is complete*. Testing during coding took place by refreshing the browser preview in Chrome and playing through the quiz, including using the restart button to check that the quiz reloaded properly, after each significant new section of code was written.
 
-###Manual Testing
+### Manual Testing
 External links have all been tested, to check that each link opens correctly and opens in a new browser.
 Both correct and incorrect answers to all questions have been selected, to check that both function as intended.
 
-###Device and Cross-Browser Testing
+### Device and Cross-Browser Testing
 The quiz has been tested by playing it through on a range of browsers and devices, including:
 Chrome, Firefox and Edge on a laptop (ASUS Vivobook Pro 14)
 Chrome and Safari on iPhones (iPhone 13 Pro and iPhone XS)
 
-###Validator Testing
+### Validator Testing
 
 W3C HTML validator
 Jigsaw CSS validator
