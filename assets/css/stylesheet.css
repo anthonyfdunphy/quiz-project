@@ -1,0 +1,67 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100%;
+    height: 100%;
+}
+
+#container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: aqua;
+}
+
+#quizBox{
+    display: grid;
+    width: 75%;
+    height: 75%;
+    background-color: pink;
+    grid-template-rows: 0.5fr 0.75fr 1.25fr;
+}
+
+/*Text header*/
+#header{
+    display: flex;
+    justify-content: space-between;
+    background-color: blue;
+}
+
+#loader{
+    background-color: brown;
+    width: 25%;
+    height: 100%;
+}
+
+#score{
+    background-color: bisque;
+    width: 10%;
+    height: 100%;
+}
+
+/*Questions for quiz*/
+#questionText{
+    background-color: orange;
+    font-size: 10vh;
+}
+
+/*4 possible answers for user to choose*/
+#questionAnswers{
+    background-color: grey;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+}
+
+/**/
+
+.questions{
+    background-color: aquamarine;
+    border: 2px solid black;
+    width: 100%;
+}
