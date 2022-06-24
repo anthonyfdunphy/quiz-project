@@ -4,34 +4,25 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/assets/css/stylesheet.css">
+    <link rel="stylesheet" href="/assets/css/game.css">
     <script src="/assets/javascript/script.js" async></script>
     <title>Quiz - Game Page</title>
 </head>
 <body>
-    <div id="container">
-        <div id="quizBox">
-            <div id="header">
-                <div id="loader"></div>
-                <div id="score"></div>
-            </div>
-            <div id="questionText">What is the name of the main character?</div>
-            <div id="questionAnswers">
-                <div class="questions">
-                    <p class="choice-text" data-number="1">Choice 1</p>
-                </div>
-                <div class="questions">
-                    <p class="choice-text" data-number="2">Choice 2</p>
-                </div>
-                <div class="questions">
-                    <p class="choice-text" data-number="3">Choice 3</p>
-                </div>
-                <div class="questions">
-                    <p class="choice-text" data-number="4">Choice 4</p>
-                </div>
+    <div class="container">
+        <div id="question-container" class="hide">
+            <div id="question">Question</div>
+            <div id="answer-buttons" class="btn-grid">
+                <button class="btn">Answer 1</button>
+                <button class="btn">Answer 2</button>
+                <button class="btn">Answer 3</button>
+                <button class="btn">Answer 4</button>
             </div>
         </div>
+        <div class="controls">
+            <button id="start-btn" class="start-btn btn">Start</button>
+            <button id="next-btn" class="next-btn btn hide">Next</button>
+        </div>
     </div>
-    
 </body>
 </html>

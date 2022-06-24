@@ -1,0 +1,37 @@
+*, ::before, ::after{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --hue--neutral: 200;
+    --hue--wrong: 0;
+    --hue--correct: 145;
+}
+
+body{
+    --hue: var(--hue--neutral);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: hsl(var(--hue), 100%, 20%);
+}
+
+body.correct{
+    --hue: var(--hue--correct);
+}
+
+body.wrong{
+    --hue: var(--hue--wrong);
+}
+
+.container{
+    width: 800px;
+    max-width: 80%;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 0 10px 2px;
+}
