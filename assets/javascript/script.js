@@ -1,6 +1,6 @@
 const startButton = document.getElementById('start-btn')
 const nextButton = document.getElementById('next-btn')
-const highScoreButton = document.getElementById('high-score-btn')
+const highScoreButton = document.getElementById('score-btn')
 const questionContainerElement = document.getElementById('question-container')
 const questionElement = document.getElementById('question')
 const answerButtonsElement = document.getElementById('answer-buttons')
@@ -21,7 +21,8 @@ highScoreButton.addEventListener('click', () => {
 
 function startGame(){
     console.log('startGame')
-    startButton.classList.add('hide')
+    startButton.classList.add('hide') //HIDE START BUTTON
+    highScoreButton.classList.add('hide') //HIDE RESTART BUTTON
     shuffledQuestions = questions.sort(() => Math.random() - .5)
     currentQuestionIndex = 0
     questionContainerElement.classList.remove('hide')
@@ -66,10 +67,10 @@ function selectAnswer(e){
     if(shuffledQuestions.length > currentQuestionIndex + 1){
         nextButton.classList.remove('hide')
     } else {
-        //SHOWING RESTART BUTTON AND SHOWING HIGHSCORE BUTTON
-        startButton.innerText = 'Restart'
-        startButton.classList.remove('hide')
-        highScoreButton.classList.remove('hide')
+        
+        startButton.innerText = 'Restart' //RENAME START BUTTON
+        startButton.classList.remove('hide') //SHOW BUTTON
+        highScoreButton.classList.remove('hide') //SHOW HIGH SCORE BUTTON
     }
 }
 

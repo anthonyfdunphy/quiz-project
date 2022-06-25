@@ -2,6 +2,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    outline: 2px solid limegreen !important;
 }
 
 :root{
@@ -71,6 +72,10 @@ body.wrong{
     font-size: 1.5rem;
     font-weight: bold;
     padding: 10px 20px;
+}
+
+#score-btn{
+    color: blueviolet;
 }
 
 .controls{
