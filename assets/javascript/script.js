@@ -1,5 +1,6 @@
 const startButton = document.getElementById('start-btn')
 const nextButton = document.getElementById('next-btn')
+const highScoreButton = document.getElementById('high-score-btn')
 const questionContainerElement = document.getElementById('question-container')
 const questionElement = document.getElementById('question')
 const answerButtonsElement = document.getElementById('answer-buttons')
@@ -10,6 +11,12 @@ startButton.addEventListener('click', startGame)
 nextButton.addEventListener('click', () => {
     currentQuestionIndex++
     setNextQuestion()
+})
+
+//EVENT LISTENER FOR HIGHSCORE BUTTON - LINKS TO HIGH SCORE HTML PAGE
+highScoreButton.addEventListener('click', () => {
+    var newloc = "https://www.geeksforgeeks.org/";
+    window.location.href = newloc;
 })
 
 function startGame(){
@@ -59,8 +66,10 @@ function selectAnswer(e){
     if(shuffledQuestions.length > currentQuestionIndex + 1){
         nextButton.classList.remove('hide')
     } else {
+        //SHOWING RESTART BUTTON AND SHOWING HIGHSCORE BUTTON
         startButton.innerText = 'Restart'
         startButton.classList.remove('hide')
+        highScoreButton.classList.remove('hide')
     }
 }
 
