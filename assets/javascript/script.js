@@ -15,7 +15,7 @@ nextButton.addEventListener('click', () => {
 
 //EVENT LISTENER FOR HIGHSCORE BUTTON - LINKS TO HIGH SCORE HTML PAGE
 highScoreButton.addEventListener('click', () => {
-    var newloc = "https://www.geeksforgeeks.org/";
+    var newloc = "highscore.html";
     window.location.href = newloc;
 })
 
