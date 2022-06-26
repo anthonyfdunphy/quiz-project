@@ -5,6 +5,7 @@ const questionContainerElement = document.getElementById('question-container')
 const questionElement = document.getElementById('question')
 const answerButtonsElement = document.getElementById('answer-buttons')
 
+let scoreCounter = 0 
 let shuffledQuestions, currentQuestionIndex
 
 startButton.addEventListener('click', startGame)
@@ -67,11 +68,24 @@ function selectAnswer(e){
     if(shuffledQuestions.length > currentQuestionIndex + 1){
         nextButton.classList.remove('hide')
     } else {
-        
         startButton.innerText = 'Restart' //RENAME START BUTTON
         startButton.classList.remove('hide') //SHOW BUTTON
         highScoreButton.classList.remove('hide') //SHOW HIGH SCORE BUTTON
     }
+
+    //THIS IS CODE TO FIGURE OUT IF ANSWER IS CORRECT OR WRONG 
+    //THIS ADDED THIS SCORE TO THE SCORECOUNTER VARIABLE
+    if(document.body.classList.contains('correct')){
+        scoreCounter++
+        console.log(scoreCounter)
+    } else {
+        scoreCounter -= 1
+        if(scoreCounter < 0){
+            scoreCounter =0
+        }
+        console.log(scoreCounter)
+    }
+  
 }
 
 function setStatusClass(element, correct){
