@@ -34,7 +34,7 @@ function savingFunction(username, score) {
 }
 
 //EVENT LISTENER FOR SAVING SCORE
-saveButton.addEventListener('click', savingFunction('username', scoreCounter))
+saveButton.addEventListener('click', savingFunction('username', 50))
 
 function startGame(){
     startButton.classList.add('hide') //HIDE START BUTTON
@@ -50,7 +50,6 @@ function startGame(){
 function setNextQuestion(){
     resetState()
     showQuestion(shuffledQuestions[currentQuestionIndex])
-
 }
 
 function showQuestion(question){
@@ -71,7 +70,6 @@ function resetState(){
     clearStatusClass(document.body)
     nextButton.classList.add('hide')
     totalScore.style.display = 'none' //HIDE SCORE DIV CONTAINER
-    //saveScore.style.display = 'none' //HIDE THE SAVE SCORE DIV
     while(answerButtonsElement.firstChild){
         answerButtonsElement.removeChild( answerButtonsElement.firstChild)
     }
@@ -99,18 +97,15 @@ function selectAnswer(e){
     if(document.body.classList.contains('correct')){
         scoreCounter++
         totalScore.innerText = 'Total Score = '+ scoreCounter
-        savingFunction('username', scoreCounter)
+        //savingFunction('username', scoreCounter)
     } else {
         scoreCounter -= 1
         if(scoreCounter < 0){
             scoreCounter =0
         }
         totalScore.innerText = 'Total Score = '+ scoreCounter
-        savingFunction('username', scoreCounter)
+        //savingFunction('username', scoreCounter)
     } 
-
-    console.log(scoreCounter)
-
 }
 
 function setStatusClass(element, correct){
