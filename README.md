@@ -6,6 +6,8 @@ This website was created for the second milestone project as part of the Code In
 
 The user will be brought to a homepage which will give the user the option to start the game. On click, the quiz will begin and the webpage will change. The user will select an answer from 4 possible answers. The style of the button will change colour to indicate a correct or incorrect answer. A status bar will load at the top of the webpage to indicate the number of questions completed. A scoreboard will also be displayed at the top of the page. The user will lose a point for every wrong answer selected.
 
+When the quiz is completed, the user is given the option to restart the game, click on the button which brings the user to the high scores page or save there score to the high scores page.
+
 
 ## Testing
 
@@ -17,11 +19,11 @@ Both correct and incorrect answers to all questions have been selected, to check
 
 ### Device and Cross-Browser Testing
 The quiz has been tested by playing it through on a range of browsers and devices, including:
-Chrome, Firefox and Edge on a laptop (ASUS Vivobook Pro 14)
-Chrome and Safari on iPhones (iPhone 13 Pro and iPhone XS)
+Chrome, Firefox and Edge on a laptop
+Chrome and Safari for iPhone
 
 ### Validator Testing
 
-W3C HTML validator
-Jigsaw CSS validator
+W3C HTML validator,
+Jigsaw CSS validator,
 JS Hint JavaScript validator
