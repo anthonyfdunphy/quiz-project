@@ -106,7 +106,7 @@ function clearStatusClass(element){
 
 const questions = [
     {
-        question: 'Which of the following is an amplifer manufacturer',
+        question: 'Which of the following is an amplifer manufacturer?',
         answers: [
             {text: 'Gibson', correct: false},
             {text: 'Shure', correct: false},
@@ -115,7 +115,7 @@ const questions = [
         ]
     },
     {
-        question: 'Which of the following is an microphone from Neumann',
+        question: 'Which of the following is an microphone from Neumann?',
         answers: [
             {text: '4038', correct: false},
             {text: 'TLM 103', correct: true},
@@ -124,7 +124,7 @@ const questions = [
         ]
     },
     {
-        question: 'Which of the following is an hifi brand',
+        question: 'Which of the following is an hifi brand?',
         answers: [
             {text: 'Sennheiser', correct: false},
             {text: 'Sonos', correct: true},
@@ -133,7 +133,7 @@ const questions = [
         ]
     },
     {
-        question: 'How many cores are in an 8 Pole Speakon',
+        question: 'How many cores are in an 8 Pole Speakon?',
         answers: [
             {text: '8', correct: true},
             {text: '4', correct: false},
@@ -142,7 +142,7 @@ const questions = [
         ]
     },
     {
-        question: 'Which of the following is a Behringer audio console',
+        question: 'Which of the following is a Behringer audio console?',
         answers: [
             {text: 'CL5', correct: false},
             {text: 'L350', correct: false},
@@ -151,7 +151,7 @@ const questions = [
         ]
     },
     {
-        question: 'Which of the following is a well known audio compressor from UREI',
+        question: 'Which of the following is a well known audio compressor from UREI?',
         answers: [
             {text: '1011', correct: false},
             {text: '1176', correct: true}

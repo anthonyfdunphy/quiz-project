@@ -1,3 +1,8 @@
+@font-face {
+    font-family: HelveticaAnthony;
+    src: url(/assets/fonts/Helvetica\ Neue\ Medium\ Extended.ttf);
+}
+
 *, ::before, ::after{
     padding: 0;
     margin: 0;
@@ -12,30 +17,45 @@
 }
 
 body{
-    --hue: var(--hue--neutral);
+    font-family: HelveticaAnthony;
     display: flex;
     align-items: center;
     justify-content: center;
     width: 100vw;
     height: 100vh;
-    background-color: hsl(var(--hue), 100%, 20%);
+    background-color: #00DBDE;
+    background-image: linear-gradient(90deg, #00DBDE 0%, #FC00FF 100%);
+
 }
 
 body.correct{
-    --hue: var(--hue--correct);
+    background-color: #85FFBD;
+    background-image: linear-gradient(45deg, #85FFBD 0%, #FFFB7D 100%);
 }
 
 body.wrong{
-    --hue: var(--hue--wrong);
+    background-color: #FF9A8B;
+    background-image: linear-gradient(90deg, #FF9A8B 0%, #FF6A88 55%, #FF99AC 100%);
 }
 
 .container{
+    font-family: HelveticaAnthony;
     width: 800px;
     max-width: 80%;
-    background-color: white;
     padding: 10px;
     border-radius: 5px;
     box-shadow: 0 0 10px 2px;
+    /* GLASS EFFECT */
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 20px;
+    border:1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
+#question{
+    font-size: 4vh;
 }
 
 .btn-grid{
@@ -46,6 +66,7 @@ body.wrong{
 }
 
 .btn{
+    font-family: HelveticaAnthony;
     --hue: var(--hue--neutral);
     border: 1px solid hsl(var(--hue), 100%, 30%);
     background-color: hsl(var(--hue), 100%, 50%);
@@ -53,10 +74,23 @@ body.wrong{
     padding: 5px 10px;
     color: white;
     outline: none;
+    text-transform: uppercase;
+
+    /* GLASS EFFECT */
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 20px;
+    border:1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 4px 22px 0 rgba(0, 0, 0, 0.37);
+}
+
+.btn:hover, .btn:focus{
+    box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
 }
 
 .btn:hover{
-    border-color: black;
+    transform: translateY(-1px);
 }
 
 .btn.correct{
