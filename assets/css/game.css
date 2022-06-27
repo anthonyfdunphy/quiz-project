@@ -110,7 +110,11 @@ body.wrong{
 }
 
 #score-btn{
-    color: blueviolet;
+    color: white;
+    margin-left: 5%;
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 10px 20px;
 }
 
 .controls{
