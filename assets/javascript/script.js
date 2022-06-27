@@ -1,3 +1,4 @@
+//GAME PAGE VARIABLES
 const startButton = document.getElementById('start-btn')
 const nextButton = document.getElementById('next-btn')
 const highScoreButton = document.getElementById('score-btn')
@@ -7,6 +8,10 @@ const answerButtonsElement = document.getElementById('answer-buttons')
 const totalScore = document.getElementById('score-board')
 const saveScore = document.getElementById('save-score')
 const saveButton = document.getElementById('save-btn')
+
+//HIGH SCORE PAGE VARIABLES
+
+const highScoreText = document.getElementById('score-storage')
 
 let scoreCounter = 0 
 let shuffledQuestions, currentQuestionIndex
@@ -23,11 +28,15 @@ highScoreButton.addEventListener('click', () => {
     window.location.href = highScorePage;
 })
 
-//EVENT LISTENER FOR SAVING SCORE
+//FUNCTION FOR SAVING SCORE TO LOCAL STORAGE
+function savingFunction() {
+    localStorage.setItem("Username", '100')
+    console.log(localStorage.getItem('Username'))
+    highScoreText.innerHTML = localStorage.getItem('Username')
+}
 
-saveButton.addEventListener('click', () =>{
-    alert('thanks for playing!')
-})
+//EVENT LISTENER FOR SAVING SCORE
+saveButton.addEventListener('click', savingFunction)
 
 
 function startGame(){
