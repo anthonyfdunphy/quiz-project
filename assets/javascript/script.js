@@ -32,7 +32,7 @@ highScoreButton.addEventListener('click', () => {
 function savingFunction() {
     localStorage.setItem("Username", '100')
     console.log(localStorage.getItem('Username'))
-    highScoreText.innerHTML = localStorage.getItem('Username')
+    /*highScoreText.innerHTML = localStorage.getItem('Username')*/
 }
 
 //EVENT LISTENER FOR SAVING SCORE
