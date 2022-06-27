@@ -29,14 +29,12 @@ highScoreButton.addEventListener('click', () => {
 })
 
 //FUNCTION FOR SAVING SCORE TO LOCAL STORAGE
-function savingFunction() {
-    localStorage.setItem("Username", '100')
-    console.log(localStorage.getItem('Username'))
-    /*highScoreText.innerHTML = localStorage.getItem('Username')*/
+function savingFunction(username, score) {
+    localStorage.setItem(username, score)
 }
 
 //EVENT LISTENER FOR SAVING SCORE
-saveButton.addEventListener('click', savingFunction)
+saveButton.addEventListener('click', savingFunction('username', '100'))
 
 
 function startGame(){
@@ -74,7 +72,7 @@ function resetState(){
     clearStatusClass(document.body)
     nextButton.classList.add('hide')
     totalScore.style.display = 'none' //HIDE SCORE DIV CONTAINER
-    saveScore.style.display = 'none' //HIDE THE SAVE SCORE DIV
+    //saveScore.style.display = 'none' //HIDE THE SAVE SCORE DIV
     while(answerButtonsElement.firstChild){
         answerButtonsElement.removeChild( answerButtonsElement.firstChild)
     }
@@ -93,7 +91,7 @@ function selectAnswer(e){
         startButton.innerText = 'Restart' //RENAME START BUTTON
         startButton.classList.remove('hide') //SHOW BUTTON
         highScoreButton.classList.remove('hide') //SHOW HIGH SCORE BUTTON
-        saveScore.style.display = 'flex' //SHOW THE SAVE SCORE DIV
+        saveScore.classList.remove('hide') //SHOW THE SAVE SCORE DIV
     }
 
     //THIS IS CODE TO FIGURE OUT IF ANSWER IS CORRECT OR WRONG 

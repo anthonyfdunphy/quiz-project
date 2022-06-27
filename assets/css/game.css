@@ -103,16 +103,8 @@ body.wrong{
     background-image: linear-gradient(90deg, #FF9A8B 0%, #FF6A88 55%, #FF99AC 100%);
 }
 
-.start-btn, .next-btn{
+.start-btn, .next-btn, .score-btn{
     font-size: 1.5rem;
-    font-weight: bold;
-    padding: 10px 20px;
-}
-
-#score-btn{
-    color: white;
-    margin-left: 5%;
-    font-size: 1.2rem;
     font-weight: bold;
     padding: 10px 20px;
 }
@@ -131,8 +123,8 @@ body.wrong{
     padding: 20px 10px 10px 10px;
 }
 
-#save-score{
-    display: none;
+.save-score{
+    display: flex;
     justify-content: center;
     text-transform: uppercase;
     padding: 10px 20px;
