@@ -1,0 +1,42 @@
+@font-face {
+    font-family: HelveticaAnthony;
+    src: url(/assets/fonts/Helvetica\ Neue\ Medium\ Extended.ttf);
+}
+
+*, ::before, ::after{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    outline: 2px solid limegreen !important;
+}
+
+body{
+    font-family: HelveticaAnthony;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: #00DBDE;
+    background-image: linear-gradient(90deg, #00DBDE 0%, #FC00FF 100%);
+
+}
+
+.score-container{
+    display: grid;
+    width: 50%;
+    height: 50%;
+}
+
+.hide{
+    display: none;
+}
+
+/* HIGH SCORE CSS*/
+
+#score-storage{
+    width: 50%;
+    height: 100px;
+    background-color: red;
+}
+
