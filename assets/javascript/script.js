@@ -9,6 +9,11 @@ const totalScore = document.getElementById('score-board')
 const saveScore = document.getElementById('save-score')
 const saveButton = document.getElementById('save-btn')
 const controls = document.getElementById('controls')
+const inputButton = document.getElementById('btn-insert')
+
+//INPUT VARIABLES
+const inpKey = document.getElementById('inpkey')
+const inpVal = document.getElementById('inpval')
 
 //HIGH SCORE PAGE VARIABLES
 const highScoreText = document.getElementById('score-storage')
@@ -35,6 +40,9 @@ function savingFunction(username, score) {
 
 //EVENT LISTENER FOR SAVING SCORE
 saveButton.addEventListener('click', savingFunction('username', 50))
+
+//EVENT LISTENER FOR INPUT BUTTON
+inputButton.addEventListener('click', savingFunction('inpKey', inpVal))
 
 function startGame(){
     startButton.classList.add('hide') //HIDE START BUTTON
