@@ -113,6 +113,7 @@ body.wrong{
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 10px;
 }
 
 /* SCORE BOARD AND LOCAL STORAGE DIV*/
@@ -149,5 +150,9 @@ body.wrong{
 
 .hide{
     display: none;
+}
+
+.add-space{
+    justify-content: space-around;
 }
 

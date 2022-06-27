@@ -6,7 +6,7 @@ function saveUserScore(username, score){
 //function to set score to high scores page
 function setUserScore(){
     const userValue = localStorage.getItem('username')
-    document.getElementById('score-storage').innerText = userValue
+    document.getElementById('score-text').innerText = userValue
 }
 
 setUserScore()

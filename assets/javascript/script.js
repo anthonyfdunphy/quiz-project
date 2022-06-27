@@ -8,9 +8,9 @@ const answerButtonsElement = document.getElementById('answer-buttons')
 const totalScore = document.getElementById('score-board')
 const saveScore = document.getElementById('save-score')
 const saveButton = document.getElementById('save-btn')
+const controls = document.getElementById('controls')
 
 //HIGH SCORE PAGE VARIABLES
-
 const highScoreText = document.getElementById('score-storage')
 
 let scoreCounter = 0 
@@ -34,7 +34,7 @@ function savingFunction(username, score) {
 }
 
 //EVENT LISTENER FOR SAVING SCORE
-saveButton.addEventListener('click', savingFunction('username', '421'))
+saveButton.addEventListener('click', savingFunction('username', scoreCounter))
 
 function startGame(){
     startButton.classList.add('hide') //HIDE START BUTTON
@@ -90,6 +90,7 @@ function selectAnswer(e){
         startButton.classList.remove('hide') //SHOW BUTTON
         highScoreButton.classList.remove('hide') //SHOW HIGH SCORE BUTTON
         saveScore.classList.remove('hide') //SHOW THE SAVE SCORE DIV
+        controls.classList.add('add-space') //JUSTIFY CONTENT ON FLEX
     }
 
     //THIS IS CODE TO FIGURE OUT IF ANSWER IS CORRECT OR WRONG 
