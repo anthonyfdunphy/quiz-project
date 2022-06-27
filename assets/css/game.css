@@ -2,7 +2,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    outline: 2px solid limegreen !important;
+    /*outline: 2px solid limegreen !important;*/
 }
 
 :root{
@@ -82,6 +82,13 @@ body.wrong{
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+#score-board{
+    display: none;
+    justify-content: center;
+    text-transform: uppercase;
+    padding: 10px 20px;
 }
 
 .hide{

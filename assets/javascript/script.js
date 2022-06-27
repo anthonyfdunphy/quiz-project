@@ -4,6 +4,7 @@ const highScoreButton = document.getElementById('score-btn')
 const questionContainerElement = document.getElementById('question-container')
 const questionElement = document.getElementById('question')
 const answerButtonsElement = document.getElementById('answer-buttons')
+const totalScore = document.getElementById('score-board')
 
 let scoreCounter = 0 
 let shuffledQuestions, currentQuestionIndex
@@ -24,6 +25,7 @@ function startGame(){
     console.log('startGame')
     startButton.classList.add('hide') //HIDE START BUTTON
     highScoreButton.classList.add('hide') //HIDE RESTART BUTTON
+    totalScore.style.display = 'flex' //SHOW SCORE DIV CONTAINER
     shuffledQuestions = questions.sort(() => Math.random() - .5)
     currentQuestionIndex = 0
     questionContainerElement.classList.remove('hide')
@@ -74,18 +76,18 @@ function selectAnswer(e){
     }
 
     //THIS IS CODE TO FIGURE OUT IF ANSWER IS CORRECT OR WRONG 
-    //THIS ADDED THIS SCORE TO THE SCORECOUNTER VARIABLE
+    //THIS SCORE IS THEN ADDED TO THE SCORECOUNTER VARIABLE
     if(document.body.classList.contains('correct')){
         scoreCounter++
-        console.log(scoreCounter)
+        totalScore.innerText = 'Total Score = '+ scoreCounter
     } else {
         scoreCounter -= 1
         if(scoreCounter < 0){
             scoreCounter =0
         }
-        console.log(scoreCounter)
-    }
-  
+        totalScore.innerText = 'Total Score = '+ scoreCounter
+    } 
+
 }
 
 function setStatusClass(element, correct){
@@ -104,31 +106,55 @@ function clearStatusClass(element){
 
 const questions = [
     {
-        question: 'What is 2 + 2',
+        question: 'Which of the following is an amplifer manufacturer',
         answers: [
-            {text: '4', correct: true},
-            {text: '22', correct: false}
+            {text: 'Gibson', correct: false},
+            {text: 'Shure', correct: false},
+            {text: 'Sennheiser', correct: false},
+            {text: 'Powersoft', correct: true}
         ]
     },
     {
-        question: 'What is 4 + 2',
+        question: 'Which of the following is an microphone from Neumann',
         answers: [
+            {text: '4038', correct: false},
+            {text: 'TLM 103', correct: true},
+            {text: 'Beta 57A', correct: false},
+            {text: 'SM57', correct: false}
+        ]
+    },
+    {
+        question: 'Which of the following is an hifi brand',
+        answers: [
+            {text: 'Sennheiser', correct: false},
+            {text: 'Sonos', correct: true},
+            {text: 'Nike', correct: false},
+            {text: 'Shure', correct: false}
+        ]
+    },
+    {
+        question: 'How many cores are in an 8 Pole Speakon',
+        answers: [
+            {text: '8', correct: true},
             {text: '4', correct: false},
-            {text: '6', correct: true}
-        ]
-    },
-    {
-        question: 'What is 3 + 3',
-        answers: [
-            {text: '6', correct: true},
-            {text: '28', correct: false}
-        ]
-    },
-    {
-        question: 'What is 9 + 1',
-        answers: [
             {text: '6', correct: false},
-            {text: '10', correct: true}
+            {text: '2', correct: false}
+        ]
+    },
+    {
+        question: 'Which of the following is a Behringer audio console',
+        answers: [
+            {text: 'CL5', correct: false},
+            {text: 'L350', correct: false},
+            {text: 'X32', correct: true},
+            {text: 'SQ5', correct: false}
+        ]
+    },
+    {
+        question: 'Which of the following is a well known audio compressor from UREI',
+        answers: [
+            {text: '1011', correct: false},
+            {text: '1176', correct: true}
         ]
     }
 ]
