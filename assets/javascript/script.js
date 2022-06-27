@@ -40,6 +40,7 @@ function startGame(){
     startButton.classList.add('hide') //HIDE START BUTTON
     highScoreButton.classList.add('hide') //HIDE RESTART BUTTON
     totalScore.style.display = 'flex' //SHOW SCORE DIV CONTAINER
+    saveScore.classList.add('hide') //HIDE SAVE SCORE CONTAINER
     shuffledQuestions = questions.sort(() => Math.random() - .5)
     currentQuestionIndex = 0
     questionContainerElement.classList.remove('hide')
