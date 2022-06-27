@@ -67,7 +67,6 @@ body.wrong{
 
 .btn{
     font-family: HelveticaAnthony;
-    --hue: var(--hue--neutral);
     border: 1px solid hsl(var(--hue), 100%, 30%);
     background-color: hsl(var(--hue), 100%, 50%);
     border-radius: 5px;
@@ -120,11 +119,36 @@ body.wrong{
     align-items: center;
 }
 
+/* SCORE BOARD AND LOCAL STORAGE DIV*/
 #score-board{
     display: none;
     justify-content: center;
     text-transform: uppercase;
+    padding: 20px 10px 10px 10px;
+}
+
+#save-score{
+    display: none;
+    justify-content: center;
+    text-transform: uppercase;
     padding: 10px 20px;
+}
+
+#save-btn{
+    font-family: HelveticaAnthony;
+    text-transform: uppercase;
+    width: 50%;
+    background-color: inherit;
+    padding: 10px 20px;
+    border-radius: 20px;
+    background-color: white;
+    color: black;
+    font-size: 3vh;
+
+}
+
+#save-btn:hover{
+    cursor: pointer;
 }
 
 .hide{

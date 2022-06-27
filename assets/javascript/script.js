@@ -5,6 +5,8 @@ const questionContainerElement = document.getElementById('question-container')
 const questionElement = document.getElementById('question')
 const answerButtonsElement = document.getElementById('answer-buttons')
 const totalScore = document.getElementById('score-board')
+const saveScore = document.getElementById('save-score')
+const saveButton = document.getElementById('save-btn')
 
 let scoreCounter = 0 
 let shuffledQuestions, currentQuestionIndex
@@ -20,6 +22,13 @@ highScoreButton.addEventListener('click', () => {
     var highScorePage = "highscore.html";
     window.location.href = highScorePage;
 })
+
+//EVENT LISTENER FOR SAVING SCORE
+
+saveButton.addEventListener('click', () =>{
+    alert('thanks for playing!')
+})
+
 
 function startGame(){
     console.log('startGame')
@@ -55,6 +64,8 @@ function showQuestion(question){
 function resetState(){
     clearStatusClass(document.body)
     nextButton.classList.add('hide')
+    totalScore.style.display = 'none' //HIDE SCORE DIV CONTAINER
+    saveScore.style.display = 'none' //HIDE THE SAVE SCORE DIV
     while(answerButtonsElement.firstChild){
         answerButtonsElement.removeChild( answerButtonsElement.firstChild)
     }
@@ -73,6 +84,7 @@ function selectAnswer(e){
         startButton.innerText = 'Restart' //RENAME START BUTTON
         startButton.classList.remove('hide') //SHOW BUTTON
         highScoreButton.classList.remove('hide') //SHOW HIGH SCORE BUTTON
+        saveScore.style.display = 'flex' //SHOW THE SAVE SCORE DIV
     }
 
     //THIS IS CODE TO FIGURE OUT IF ANSWER IS CORRECT OR WRONG 
