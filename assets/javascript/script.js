@@ -34,11 +34,9 @@ function savingFunction(username, score) {
 }
 
 //EVENT LISTENER FOR SAVING SCORE
-saveButton.addEventListener('click', savingFunction('username', '100'))
-
+saveButton.addEventListener('click', savingFunction('username', '421'))
 
 function startGame(){
-    console.log('startGame')
     startButton.classList.add('hide') //HIDE START BUTTON
     highScoreButton.classList.add('hide') //HIDE RESTART BUTTON
     totalScore.style.display = 'flex' //SHOW SCORE DIV CONTAINER
@@ -99,13 +97,17 @@ function selectAnswer(e){
     if(document.body.classList.contains('correct')){
         scoreCounter++
         totalScore.innerText = 'Total Score = '+ scoreCounter
+        savingFunction('username', scoreCounter)
     } else {
         scoreCounter -= 1
         if(scoreCounter < 0){
             scoreCounter =0
         }
         totalScore.innerText = 'Total Score = '+ scoreCounter
+        savingFunction('username', scoreCounter)
     } 
+
+    console.log(scoreCounter)
 
 }
 
