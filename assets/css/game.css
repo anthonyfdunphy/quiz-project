@@ -94,12 +94,14 @@ body.wrong{
 }
 
 .btn.correct{
-    --hue: var(--hue--correct);
+    background-color: #85FFBD;
+    background-image: linear-gradient(45deg, #85FFBD 0%, #FFFB7D 100%);
     color: black;
 }
 
 .btn.wrong{
-    --hue: var(--hue--wrong);
+    background-color: #FF9A8B;
+    background-image: linear-gradient(90deg, #FF9A8B 0%, #FF6A88 55%, #FF99AC 100%);
 }
 
 .start-btn, .next-btn{
