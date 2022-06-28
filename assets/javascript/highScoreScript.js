@@ -15,15 +15,21 @@ function insertValues(){
 
     const localValue = localStorage.getItem('highscores')
 
-    //convert localValue to array
-
+    //convert localValue to JSON
+    const localValues = JSON.parse(localValue)
 
     const scoreVal = document.getElementById('score-text')
 
     if (!scoreVal) return
     console.log(scoreVal)
 
-    scoreVal.innerText = localValue
+    const formattedHighscores = localValues.map((it) => {
+        return `<div>${it.username}, ${it.score}</div>`
+    })
+
+    const finalMarkUp = formattedHighscores.join('')
+
+    scoreVal.innerHTML = finalMarkUp
 
     // const x = document.getElementById("sample-table").insertRow(0);
     // const y = x.insertCell(0);
