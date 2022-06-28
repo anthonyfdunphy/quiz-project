@@ -1,15 +1,35 @@
+let highscores = []
+
 //function to save the username to local storage
 function saveUserScore(username, score){
-    localStorage.setItem(username, score)
+    const newHighscore = {username,score}
+
+    highscores.push(newHighscore)
+
+    //save in local storage refer to as highscores = value of highscores
+    localStorage.setItem('highscores', JSON.stringify(highscores))
 }
 
 //INPUT CELL VALUE TO TABLE
+function insertValues(){
 
-function insert_Row(){
-    var x=document.getElementById("sampleTable").insertRow(0);
-    var y = x.insertCell(0);
+    const localValue = localStorage.getItem('highscores')
 
-    var localVal = localStorage.getItem('Username')
-    y.innerHTML= localVal;
+    //convert localValue to array
+
+
+    const scoreVal = document.getElementById('score-text')
+
+    if (!scoreVal) return
+    console.log(scoreVal)
+
+    scoreVal.innerText = localValue
+
+    // const x = document.getElementById("sample-table").insertRow(0);
+    // const y = x.insertCell(0);
+
+    // const localVal = localStorage.getItem('Username')
+    // y.innerHTML= localVal;
 }
+
  

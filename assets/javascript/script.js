@@ -40,7 +40,7 @@ function savingFunction(username, score) {
 }
 
 //EVENT LISTENER FOR SAVING SCORE
-saveButton.addEventListener('click', savingFunction('username', 50))
+saveButton.addEventListener('click', savingFunction('Username', 50))
 
 
 //EVENT LISTENER FOR INPUT BUTTON
@@ -49,9 +49,12 @@ submitButton.addEventListener('click', () =>{
     const key = inputKey.value
     const value = inputValue.value
 
-    localStorage.setItem(key, value)
+    // localStorage.setItem(key, value)
+    saveUserScore(key, value)
     console.log(key)
     console.log(value)
+
+    insertValues()
 
 })
 
