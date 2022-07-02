@@ -38,4 +38,8 @@ function insertValues(){
     // y.innerHTML= localVal;
 }
 
+window.onload(
+    insertValues()
+)
+
  
