@@ -92,6 +92,7 @@ function showQuestion(question){
 function resetState(){
     clearStatusClass(document.body)
     nextButton.classList.add('hide')
+    fieldInput.classList.add('hide')
     totalScore.style.display = 'none' //HIDE SCORE DIV CONTAINER
     while(answerButtonsElement.firstChild){
         answerButtonsElement.removeChild( answerButtonsElement.firstChild)
@@ -113,7 +114,7 @@ function selectAnswer(e){
         highScoreButton.classList.remove('hide') //SHOW HIGH SCORE BUTTON
         saveScore.classList.remove('hide') //SHOW THE SAVE SCORE DIV
         controls.classList.add('add-space') //JUSTIFY CONTENT ON FLEX - THIS WILL SPACE THE BUTTONS
-        fieldInput.classList.remove('hide')
+        fieldInput.classList.remove('hide') // SHOW FIELDSET PAGE
     }
 
     //THIS IS CODE TO FIGURE OUT IF ANSWER IS CORRECT OR WRONG 
