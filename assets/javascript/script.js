@@ -10,6 +10,7 @@ const saveScore = document.getElementById('save-score')
 const saveButton = document.getElementById('save-btn')
 const controls = document.getElementById('controls')
 const inputButton = document.getElementById('submit-button')
+const fieldInput = document.getElementById('input-field')
 
 //INPUT VARIABLES
 const inputKey = document.getElementById('inpKey')
@@ -111,7 +112,8 @@ function selectAnswer(e){
         startButton.classList.remove('hide') //SHOW BUTTON
         highScoreButton.classList.remove('hide') //SHOW HIGH SCORE BUTTON
         saveScore.classList.remove('hide') //SHOW THE SAVE SCORE DIV
-        controls.classList.add('add-space') //JUSTIFY CONTENT ON FLEX
+        controls.classList.add('add-space') //JUSTIFY CONTENT ON FLEX - THIS WILL SPACE THE BUTTONS
+        fieldInput.classList.remove('hide')
     }
 
     //THIS IS CODE TO FIGURE OUT IF ANSWER IS CORRECT OR WRONG 
