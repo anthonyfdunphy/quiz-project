@@ -1,3 +1,5 @@
+const scoreClicker = document.getElementById('scoreboard-button')
+
 let highscores = []
 
 //function to save the username to local storage
@@ -37,6 +39,8 @@ function insertValues(){
     // const localVal = localStorage.getItem('Username')
     // y.innerHTML= localVal;
 }
+
+scoreClicker.addEventListener('click', insertValues())
 
 // window.onload(
 //     insertValues()
