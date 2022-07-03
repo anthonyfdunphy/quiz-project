@@ -152,8 +152,45 @@ body.wrong{
     align-items: center;
     justify-content: center;
     border-radius: 10px;
-    background-color: white;
-    
+    /* background-color: white; */
+    border: 0;  
+}
+
+/* fieldset styling */
+
+#input-field{
+    border: none;
+    background-color: transparent;
+    resize: none;
+    outline: none;
+}
+
+/* input box styling */
+#inpKey, #inpVal{
+    /* border: none; */
+    /* outline: none; */
+    border-radius: 10px;
+    background-color: transparent;
+    resize: none;
+    width: auto;
+    height: 4vh;
+}
+
+#submit-button{
+    padding: 10px;
+    font-family: HelveticaAnthony;
+    text-transform: uppercase;
+    border-radius: 10px;
+    height: 4vh;
+}
+
+/* change placeholder color */
+
+::placeholder{
+    font-family: HelveticaAnthony;
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
 }
 
 .hide{
@@ -163,4 +200,6 @@ body.wrong{
 .add-space{
     justify-content: space-around;
 }
+
+
 
