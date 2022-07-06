@@ -8,27 +8,6 @@ The user will be brought to a homepage which will give the user the option to st
 
 When the quiz is completed, the user is given the option to restart the game, click on the button which brings the user to the high scores page or save there score to the high scores page.
 
-
-## Testing
-
-*This is placeholder text until the site is complete*. Testing during coding took place by refreshing the browser preview in Chrome and playing through the quiz, including using the restart button to check that the quiz reloaded properly, after each significant new section of code was written.
-
-### Manual Testing
-External links have all been tested, to check that each link opens correctly and opens in a new browser.
-Both correct and incorrect answers to all questions have been selected, to check that both function as intended.
-
-### Device and Cross-Browser Testing
-The quiz has been tested by playing it through on a range of browsers and devices, including:
-Chrome, Firefox and Edge on a laptop
-Chrome and Safari for iPhone
-
-### Validator Testing
-
-W3C HTML validator,
-Jigsaw CSS validator,
-JS Hint JavaScript validator
-
-
 ---------------
 
 ## Technologies utilised in this project
@@ -53,5 +32,25 @@ The steps I followed for deploying to Github were as follow:
 3. Create a new repository
 4. User Gitpod edit the files
 5. Created a HTML file, a CSS file and a Javascript - some of which sat within an assets folder which helped for organising the file structure
+
+## Testing
+
+*This is placeholder text until the site is complete*. Testing during coding took place by refreshing the browser preview in Chrome and playing through the quiz, including using the restart button to check that the quiz reloaded properly, after each significant new section of code was written.
+
+### Manual Testing
+External links have all been tested, to check that each link opens correctly and opens in a new browser.
+Both correct and incorrect answers to all questions have been selected, to check that both function as intended.
+
+### Device and Cross-Browser Testing
+The quiz has been tested by playing it through on a range of browsers and devices, including:
+Chrome, Firefox and Edge on a laptop
+Chrome and Safari for iPhone
+
+### Validator Testing
+
+W3C HTML validator,
+Jigsaw CSS validator,
+JS Hint JavaScript validator
+
 
 
