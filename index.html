@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/assets/css/game.css">
+    <link rel="shortcut icon" href="#" /> 
+    <title>Quiz - Game Page</title>
+</head>
+<body>
+    <div class="container">
+        <div id="question-container" class="hide">
+            <div id="question">Question</div>
+            <div id="answer-buttons" class="btn-grid">
+                <button class="btn">Answer 1</button>
+                <button class="btn">Answer 2</button>
+                <button class="btn">Answer 3</button>
+                <button class="btn">Answer 4</button>
+            </div>
+        </div>
+        <div id = "controls" class="controls">
+            <button id="start-btn" class="start-btn btn">Start</button>
+            <button id="next-btn" class="next-btn btn hide">Next</button>
+            <button id="score-btn" class="score-btn btn hide">Score Board</button>
+        </div>
+        <div id="score-board"></div>
+        <div id ="save-score" class="save-score hide">
+        </div>
+        <div id="user-input">
+            <fieldset id="input-field" class="input-field hide">
+                <input id ="inpKey" type="text" placeholder="Enter Name">
+                <input id="inpVal" type="text" placeholder="Enter Score">
+                <button id="submit-button">Save Score</button>
+            </fieldset>
+        </div>
+    </div>
+    
+
+    <script src="/assets/javascript/highScoreScript.js"></script>
+    <script src="/assets/javascript/script.js"></script>
+
+</body>
+</html>
