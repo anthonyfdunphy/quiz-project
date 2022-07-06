@@ -107,6 +107,7 @@ body.wrong{
     font-size: 1.5rem;
     font-weight: bold;
     padding: 10px 20px;
+    cursor: pointer;
 }
 
 .controls{
@@ -183,6 +184,7 @@ body.wrong{
     text-transform: uppercase;
     border-radius: 10px;
     height: 4vh;
+    cursor: pointer;
 }
 
 /* change placeholder color */
