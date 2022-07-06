@@ -44,6 +44,14 @@ The sites design was wireframed with drawing shown below. The design would consi
 
 ![alt text](https://i.imgur.com/HJqxPG9.jpeg)
 
+## Deployment
 
+The steps I followed for deploying to Github were as follow:
+
+1. Navigate to github.com in my browser
+2. Log into my account using my user credentials
+3. Create a new repository
+4. User Gitpod edit the files
+5. Created a HTML file, a CSS file and a Javascript - some of which sat within an assets folder which helped for organising the file structure
 
 
