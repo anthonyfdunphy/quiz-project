@@ -40,10 +40,8 @@ function insertValues(){
     // y.innerHTML= localVal;
 }
 
-scoreClicker.addEventListener('click', insertValues())
-
-// window.onload(
-//     insertValues()
-// )
+if(scoreClicker != null){
+    scoreClicker.addEventListener('click', insertValues())
+}
 
  
