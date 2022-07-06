@@ -27,3 +27,27 @@ Chrome and Safari for iPhone
 W3C HTML validator,
 Jigsaw CSS validator,
 JS Hint JavaScript validator
+
+
+---------------
+# && OR Portfolio Website
+Build of porfolio website with responsive design. The live version of the site can be found here.
+
+![](assets/responsive_page.PNG)
+
+## Technologies utilised in this project
+
+- **HTML**: Website structure was developed using the HTML language
+- **CSS**: Styling of the page was with CSS using an external stylesheet - linked to from the main HTML page
+- **Javascript**: Website structure was developed using the HTML language
+- **Github**: Source code of the website is hosted on the my Github repo - push and commited sent to from Gitpod when developing the site
+
+# UX/UI Design
+
+The sites design was wireframed with drawing shown below. The design would consist of a landing/homepage, the user would be greeted with a start button. Once this button was clicked, the user would have a question revealed with a series of possible answers available to them.
+
+![alt text](https://i.imgur.com/HJqxPG9.jpeg)
+
+
+
+
