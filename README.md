@@ -1,5 +1,7 @@
 # Quiz Website - Project
 
+![alt text](https://i.imgur.com/5B4fcpI.png)
+
 This website was created for the second milestone project as part of the Code Institute course.
 
 ## Concept
