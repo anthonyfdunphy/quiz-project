@@ -34,6 +34,8 @@ body{
     align-items: center;
     justify-content: center;
     background-color: pink;
+    font-size: 5vh;
+    text-transform: uppercase;
 
     background-color: #e7eff9;
     background-image: linear-gradient(315deg, #e7eff9 0%, #cfd6e6 74%);
@@ -53,6 +55,8 @@ body{
 #returnButton{
     font-family: HelveticaAnthony;
     text-transform: uppercase;
+    font-size: 4vh;
+    cursor: pointer;
 }
 
 #score-storage{
@@ -66,16 +70,19 @@ body{
     background-image: linear-gradient(315deg, #e7eff9 0%, #cfd6e6 74%);
 }
 
+
 /* scoreboard button styling */
 #scoreboard-button{
     width: 17vw;
     height: 30px;
     font-family: HelveticaAnthony;
     text-transform: uppercase;
+    cursor: pointer;
 }
 
 #score-text{
     display: grid;
+    text-transform: uppercase;
     align-items: center;
     justify-content: center;
 }
