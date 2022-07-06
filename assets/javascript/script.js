@@ -18,6 +18,7 @@ const submitButton = document.getElementById('submit-button')
 //HIGH SCORE PAGE VARIABLES
 const highScoreText = document.getElementById('score-storage')
 
+// USER OVERALL SCORE
 let scoreCounter = 0 
 let shuffledQuestions, currentQuestionIndex
 
@@ -38,7 +39,7 @@ function savingFunction(username, score) {
     localStorage.setItem(username, score)
 }
 
-//EVENT LISTENER FOR INPUT BUTTON
+//EVENT LISTENER FOR INPUT BUTTONtotalScore
 submitButton.addEventListener('click', () =>{
 
     const key = inputKey.value
@@ -56,10 +57,11 @@ submitButton.addEventListener('click', () =>{
 function startGame(){
     startButton.classList.add('hide') //HIDE START BUTTON
     highScoreButton.classList.add('hide') //HIDE RESTART BUTTON
-    totalScore.style.display = 'flex' //SHOW SCORE DIV CONTAINER
+    totalScore.classList.remove('hide') //SHOW SCORE DIV CONTAINER
     shuffledQuestions = questions.sort(() => Math.random() - .5)
     currentQuestionIndex = 0
     questionContainerElement.classList.remove('hide')
+    scoreCounter = 0 // RESET COUNTER BACK TO 0 FOR START OF GAME
     setNextQuestion()
 }
 
@@ -86,7 +88,7 @@ function resetState(){
     clearStatusClass(document.body)
     nextButton.classList.add('hide')
     fieldInput.classList.add('hide')
-    totalScore.style.display = 'none' //HIDE SCORE DIV CONTAINER
+    //totalScore.style.display = 'none' //HIDE SCORE DIV CONTAINER
     while(answerButtonsElement.firstChild){
         answerButtonsElement.removeChild( answerButtonsElement.firstChild)
     }

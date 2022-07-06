@@ -117,7 +117,7 @@ body.wrong{
 }
 
 #score-board{
-    display: none;
+    /* display: none; */
     justify-content: center;
     text-transform: uppercase;
     padding: 20px 10px 10px 10px;
