@@ -169,9 +169,9 @@ body.wrong{
 #inpKey, #inpVal{
     /* border: none; */
     /* outline: none; */
+    /* background-color: transparent; */
     font-family: HelveticaAnthony;
     border-radius: 10px;
-    background-color: transparent;
     resize: none;
     width: auto;
     height: 4vh;
@@ -189,7 +189,7 @@ body.wrong{
 
 ::placeholder{
     font-family: HelveticaAnthony;
-    color: white;
+    color: black;
     text-transform: uppercase;
     font-weight: bold;
 }
