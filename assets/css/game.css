@@ -169,6 +169,7 @@ body.wrong{
 #inpKey, #inpVal{
     /* border: none; */
     /* outline: none; */
+    font-family: HelveticaAnthony;
     border-radius: 10px;
     background-color: transparent;
     resize: none;

@@ -6,8 +6,6 @@ const questionContainerElement = document.getElementById('question-container')
 const questionElement = document.getElementById('question')
 const answerButtonsElement = document.getElementById('answer-buttons')
 const totalScore = document.getElementById('score-board')
-const saveScore = document.getElementById('save-score')
-const saveButton = document.getElementById('save-btn')
 const controls = document.getElementById('controls')
 const inputButton = document.getElementById('submit-button')
 const fieldInput = document.getElementById('input-field')
@@ -40,10 +38,6 @@ function savingFunction(username, score) {
     localStorage.setItem(username, score)
 }
 
-//EVENT LISTENER FOR SAVING SCORE
-saveButton.addEventListener('click', savingFunction('Username', 50))
-
-
 //EVENT LISTENER FOR INPUT BUTTON
 submitButton.addEventListener('click', () =>{
 
@@ -63,7 +57,6 @@ function startGame(){
     startButton.classList.add('hide') //HIDE START BUTTON
     highScoreButton.classList.add('hide') //HIDE RESTART BUTTON
     totalScore.style.display = 'flex' //SHOW SCORE DIV CONTAINER
-    saveScore.classList.add('hide') //HIDE SAVE SCORE CONTAINER
     shuffledQuestions = questions.sort(() => Math.random() - .5)
     currentQuestionIndex = 0
     questionContainerElement.classList.remove('hide')
@@ -112,7 +105,6 @@ function selectAnswer(e){
         startButton.innerText = 'Restart' //RENAME START BUTTON
         startButton.classList.remove('hide') //SHOW BUTTON
         highScoreButton.classList.remove('hide') //SHOW HIGH SCORE BUTTON
-        saveScore.classList.remove('hide') //SHOW THE SAVE SCORE DIV
         controls.classList.add('add-space') //JUSTIFY CONTENT ON FLEX - THIS WILL SPACE THE BUTTONS
         fieldInput.classList.remove('hide') // SHOW FIELDSET PAGE
     }
