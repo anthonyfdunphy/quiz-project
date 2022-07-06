@@ -22,37 +22,49 @@ const highScoreText = document.getElementById('score-storage')
 let scoreCounter = 0 
 let shuffledQuestions, currentQuestionIndex
 
-startButton.addEventListener('click', startGame)
-nextButton.addEventListener('click', () => {
-    currentQuestionIndex++
-    setNextQuestion()
-})
+// EVENT LISTENER FOR START GAME
+if(startButton != null){
+    startButton.addEventListener('click', startGame) 
+}
+
+//EVENT LISTENER FOR NEXT BUTTON
+if(nextButton != null){
+    nextButton.addEventListener('click', () => {
+        currentQuestionIndex++
+        setNextQuestion()
+    })
+}
 
 //EVENT LISTENER FOR HIGHSCORE BUTTON - LINKS TO HIGH SCORE HTML PAGE
-highScoreButton.addEventListener('click', () => {
+if (highScoreButton != null){
+    highScoreButton.addEventListener('click', () => {
     var highScorePage = "highscore.html";
     window.location.href = highScorePage;
-})
+    })
+}
+
 
 //FUNCTION FOR SAVING SCORE TO LOCAL STORAGE
 function savingFunction(username, score) {
     localStorage.setItem(username, score)
 }
 
-//EVENT LISTENER FOR INPUT BUTTONtotalScore
-submitButton.addEventListener('click', () =>{
+//EVENT LISTENER FOR INPUT BUTTON
+if(submitButton != null){
+    
+    submitButton.addEventListener('click', () =>{
 
     const key = inputKey.value
     const value = inputValue.value
 
     // localStorage.setItem(key, value)
     saveUserScore(key, value)
-    console.log(key)
-    console.log(value)
 
     insertValues()
+    })
 
-})
+}
+
 
 function startGame(){
     startButton.classList.add('hide') //HIDE START BUTTON

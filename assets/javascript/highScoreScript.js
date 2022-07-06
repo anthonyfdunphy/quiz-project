@@ -23,7 +23,6 @@ function insertValues(){
     const scoreVal = document.getElementById('score-text')
 
     if (!scoreVal) return
-    console.log(scoreVal)
 
     const formattedHighscores = localValues.map((it) => {
         return `<div>${it.username}, ${it.score}</div>`
