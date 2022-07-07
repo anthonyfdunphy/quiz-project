@@ -1,36 +1,36 @@
-const scoreClicker = document.getElementById('scoreboard-button')
+const scoreClicker = document.getElementById('scoreboard-button');
 
-let highscores = []
+let highscores = [];
 
 //function to save the username to local storage
 function saveUserScore(username, score){
-    const newHighscore = {username,score}
+    const newHighscore = {username,score};
 
-    highscores.push(newHighscore)
+    highscores.push(newHighscore);
 
     //save in local storage refer to as highscores = value of highscores
-    localStorage.setItem('highscores', JSON.stringify(highscores))
+    localStorage.setItem('highscores', JSON.stringify(highscores));
 }
 
 //INPUT CELL VALUE TO TABLE
 function insertValues(){
 
-    const localValue = localStorage.getItem('highscores')
+    const localValue = localStorage.getItem('highscores');
 
     //convert localValue to JSON
-    const localValues = JSON.parse(localValue)
+    const localValues = JSON.parse(localValue);
 
-    const scoreVal = document.getElementById('score-text')
+    const scoreVal = document.getElementById('score-text');
 
-    if (!scoreVal) return
+    if (!scoreVal) return;
 
     const formattedHighscores = localValues.map((it) => {
-        return `<div>${it.username}, ${it.score}</div>`
-    })
+        return `<div>${it.username}, ${it.score}</div>`;
+    });
 
-    const finalMarkUp = formattedHighscores.join('')
+    const finalMarkUp = formattedHighscores.join('');
 
-    scoreVal.innerHTML = finalMarkUp
+    scoreVal.innerHTML = finalMarkUp;
 
     // const x = document.getElementById("sample-table").insertRow(0);
     // const y = x.insertCell(0);
@@ -40,7 +40,7 @@ function insertValues(){
 }
 
 if(scoreClicker != null){
-    scoreClicker.addEventListener('click', insertValues())
+    scoreClicker.addEventListener('click', insertValues());
 }
 
  
