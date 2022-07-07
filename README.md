@@ -25,6 +25,17 @@ The sites design was wireframed with drawing shown below. The design would consi
 
 ![alt text](https://i.imgur.com/HJqxPG9.jpeg)
 
+My design consisted of 3 seperate linear gradient background - the main background, the correct answer background and the wrong answer background.
+
+### Main body background
+![alt text](https://i.imgur.com/CUQeRIP.png)
+
+### Correct background
+![alt text](https://i.imgur.com/ThfHfFd.png)
+
+### Wrong background
+![alt text](https://i.imgur.com/Kbg96h7.png)
+
 ## Deployment
 
 The steps I followed for deploying to Github were as follow:
