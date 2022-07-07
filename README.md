@@ -50,6 +50,12 @@ Chrome and Safari for iPhone
 
 ### Validator Testing
 
+#### Lighthouse
+
+I used Google's open-source, automated tool for improving the performance, quality, and correctness of your web apps. I got the following results from my website review using this tool
+
+![alt text](https://i.imgur.com/U7GTMBq.png)
+
 W3C HTML validator,
 Jigsaw CSS validator,
 JS Hint JavaScript validator
