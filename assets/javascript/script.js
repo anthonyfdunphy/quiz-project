@@ -13,27 +13,25 @@ const fieldInput = document.getElementById('input-field');
 //INPUT VARIABLES
 const inputKey = document.getElementById('inpKey');
 const submitButton = document.getElementById('submit-button');
-
 //HIGH SCORE PAGE VARIABLES
 const highScoreText = document.getElementById('score-storage');
 
 // USER OVERALL SCORE
-let scoreCounter = 0 ;
-let shuffledQuestions, currentQuestionIndex;
+let scoreCounter = 0;
+let shuffledQuestions; 
+let currentQuestionIndex;
 
 // EVENT LISTENER FOR START GAME
 if(startButton != null){
-    startButton.addEventListener('click', startGame) 
+    startButton.addEventListener('click', startGame);
 }
-
 //EVENT LISTENER FOR NEXT BUTTON
 if(nextButton != null){
     nextButton.addEventListener('click', () => {
-        currentQuestionIndex++
-        setNextQuestion()
+        currentQuestionIndex++;
+        setNextQuestion();
     })
 }
-
 //EVENT LISTENER FOR HIGHSCORE BUTTON - LINKS TO HIGH SCORE HTML PAGE
 if (highScoreButton != null){
     highScoreButton.addEventListener('click', () => {
@@ -41,52 +39,39 @@ if (highScoreButton != null){
     window.location.href = highScorePage;
     })
 }
-
-
 //FUNCTION FOR SAVING SCORE TO LOCAL STORAGE
 function savingFunction(username, score) {
-    localStorage.setItem(username, score)
+    localStorage.setItem(username, score);
 }
-
 //EVENT LISTENER FOR INPUT BUTTON
 if(submitButton != null){
-    
     submitButton.addEventListener('click', () =>{
-
-    const key = inputKey.value
-
+    const key = inputKey.value;
     //CHECK IF BLANK SPACES IN INPUT KEY
     if (key.trim() === '') {
-        alert('Please enter a username')
+        alert('Please enter a username');
     }
-
     // localStorage.setItem(key, value)
-    saveUserScore(key, scoreCounter)
-
-    insertValues()
+    saveUserScore(key, scoreCounter);
+    insertValues();
     })
-
 }
-
-
 function startGame(){
-    startButton.classList.add('hide') //HIDE START BUTTON
-    highScoreButton.classList.add('hide') //HIDE RESTART BUTTON
-    totalScore.classList.remove('hide') //SHOW SCORE DIV CONTAINER
-    shuffledQuestions = questions.sort(() => Math.random() - 0.5)
-    currentQuestionIndex = 0
-    questionContainerElement.classList.remove('hide')
-    scoreCounter = 0 // RESET COUNTER BACK TO 0 FOR START OF GAME
-    setNextQuestion()
+    startButton.classList.add('hide'); //HIDE START BUTTON
+    highScoreButton.classList.add('hide'); //HIDE RESTART BUTTON
+    totalScore.classList.remove('hide'); //SHOW SCORE DIV CONTAINER
+    shuffledQuestions = questions.sort(() => Math.random() - 0.5);
+    currentQuestionIndex = 0;
+    questionContainerElement.classList.remove('hide');
+    scoreCounter = 0; // RESET COUNTER BACK TO 0 FOR START OF GAME
+    setNextQuestion();
 }
-
 function setNextQuestion(){
-    resetState()
-    showQuestion(shuffledQuestions[currentQuestionIndex])
+    resetState();
+    showQuestion(shuffledQuestions[currentQuestionIndex]);
 }
-
 function showQuestion(question){
-    questionElement.innerText = question.question
+    questionElement.innerText = question.question;
     question.answers.forEach(answer => {
         const button = document.createElement('button')
         button.innerText = answer.text
@@ -98,7 +83,6 @@ function showQuestion(question){
         answerButtonsElement.appendChild(button)
     })
 }
-
 function resetState(){
     clearStatusClass(document.body)
     nextButton.classList.add('hide')
@@ -108,7 +92,6 @@ function resetState(){
         answerButtonsElement.removeChild( answerButtonsElement.firstChild)
     }
 }
-
 function selectAnswer(e){
     const selectedButton = e.target
     const correct = selectedButton.dataset.correct
@@ -125,7 +108,6 @@ function selectAnswer(e){
         controls.classList.add('add-space') //JUSTIFY CONTENT ON FLEX - THIS WILL SPACE THE BUTTONS
         fieldInput.classList.remove('hide') // SHOW FIELDSET PAGE
     }
-
     //THIS IS CODE TO FIGURE OUT IF ANSWER IS CORRECT OR WRONG 
     //THIS SCORE IS THEN ADDED TO THE SCORECOUNTER VARIABLE
     if(document.body.classList.contains('correct')){
@@ -141,7 +123,6 @@ function selectAnswer(e){
         //savingFunction('username', scoreCounter)
     } 
 }
-
 function setStatusClass(element, correct){
     clearStatusClass(element)
     if(correct){
@@ -150,12 +131,10 @@ function setStatusClass(element, correct){
         element.classList.add('wrong')
     }
 }
-
 function clearStatusClass(element){
     element.classList.remove('correct')
     element.classList.remove('wrong')
 }
-
 const questions = [
     {
         question: 'Which of the following is an amplifer manufacturer?',
