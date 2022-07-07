@@ -12,7 +12,6 @@ const fieldInput = document.getElementById('input-field')
 
 //INPUT VARIABLES
 const inputKey = document.getElementById('inpKey')
-const inputValue = document.getElementById('inpVal')
 const submitButton = document.getElementById('submit-button')
 
 //HIGH SCORE PAGE VARIABLES
@@ -55,10 +54,14 @@ if(submitButton != null){
     submitButton.addEventListener('click', () =>{
 
     const key = inputKey.value
-    const value = inputValue.value
+
+    //CHECK IF BLANK SPACES IN INPUT KEY
+    if (key.trim() === '') {
+        alert('Please enter a username')
+    }
 
     // localStorage.setItem(key, value)
-    saveUserScore(key, value)
+    saveUserScore(key, scoreCounter)
 
     insertValues()
     })
