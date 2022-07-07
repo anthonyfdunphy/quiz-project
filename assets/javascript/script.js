@@ -1,4 +1,4 @@
-//GAME PAGE VARIABLES
+//game page variables 
 const startButton = document.getElementById('start-btn');
 const nextButton = document.getElementById('next-btn');
 const highScoreButton = document.getElementById('score-btn');
@@ -7,25 +7,25 @@ const questionElement = document.getElementById('question');
 const answerButtonsElement = document.getElementById('answer-buttons');
 const totalScore = document.getElementById('score-board');
 const controls = document.getElementById('controls');
-const inputButton = document.getElementById('submit-button');
 const fieldInput = document.getElementById('input-field');
 
-//INPUT VARIABLES
+//input variables
 const inputKey = document.getElementById('inpKey');
 const submitButton = document.getElementById('submit-button');
-//HIGH SCORE PAGE VARIABLES
+
+//high score page variable
 const highScoreText = document.getElementById('score-storage');
 
-// USER OVERALL SCORE
+// user overall score
 let scoreCounter = 0;
 let shuffledQuestions; 
 let currentQuestionIndex;
 
-// EVENT LISTENER FOR START GAME
+//event listener for start game
 if(startButton != null){
     startButton.addEventListener('click', startGame);
 }
-//EVENT LISTENER FOR NEXT BUTTON
+//event listener for next button
 if(nextButton != null){
     nextButton.addEventListener('click', () => {
         currentQuestionIndex++;
@@ -39,31 +39,35 @@ if (highScoreButton != null){
     window.location.href = highScorePage;
     });
 }
-//FUNCTION FOR SAVING SCORE TO LOCAL STORAGE
-function savingFunction(username, score) {
-    localStorage.setItem(username, score);
-}
-//EVENT LISTENER FOR INPUT BUTTON
+
+
+//event listener for submit button
 if(submitButton != null){
     submitButton.addEventListener('click', () =>{
     const key = inputKey.value;
-    //CHECK IF BLANK SPACES IN INPUT KEY
+    //check if blank spaces are in input key
     if (key.trim() === '') {
         alert('Please enter a username');
     }
-    // localStorage.setItem(key, value)
+
+    //add key and value to local storage
     saveUserScore(key, scoreCounter);
     insertValues();
+
+    //open high score page when data is submitted
+    const highScorePage = "highscore.html";
+    window.location.href = highScorePage;
+
     });
 }
 function startGame(){
-    startButton.classList.add('hide'); //HIDE START BUTTON
-    highScoreButton.classList.add('hide'); //HIDE RESTART BUTTON
-    totalScore.classList.remove('hide'); //SHOW SCORE DIV CONTAINER
+    startButton.classList.add('hide'); //hide start button
+    highScoreButton.classList.add('hide'); //hide restart button
+    totalScore.classList.remove('hide'); //show score div container
     shuffledQuestions = questions.sort(() => Math.random() - 0.5);
     currentQuestionIndex = 0;
     questionContainerElement.classList.remove('hide');
-    scoreCounter = 0; // RESET COUNTER BACK TO 0 FOR START OF GAME
+    scoreCounter = 0; // reset counter back to 0 for start of gameRESET COUNTER BACK TO 0 FOR START OF GAME
     setNextQuestion();
 }
 function setNextQuestion(){
