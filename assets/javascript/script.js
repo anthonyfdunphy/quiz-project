@@ -30,14 +30,14 @@ if(nextButton != null){
     nextButton.addEventListener('click', () => {
         currentQuestionIndex++;
         setNextQuestion();
-    })
+    });
 }
 //EVENT LISTENER FOR HIGHSCORE BUTTON - LINKS TO HIGH SCORE HTML PAGE
 if (highScoreButton != null){
     highScoreButton.addEventListener('click', () => {
     const highScorePage = "highscore.html";
     window.location.href = highScorePage;
-    })
+    });
 }
 //FUNCTION FOR SAVING SCORE TO LOCAL STORAGE
 function savingFunction(username, score) {
@@ -54,7 +54,7 @@ if(submitButton != null){
     // localStorage.setItem(key, value)
     saveUserScore(key, scoreCounter);
     insertValues();
-    })
+    });
 }
 function startGame(){
     startButton.classList.add('hide'); //HIDE START BUTTON
@@ -73,67 +73,66 @@ function setNextQuestion(){
 function showQuestion(question){
     questionElement.innerText = question.question;
     question.answers.forEach(answer => {
-        const button = document.createElement('button')
-        button.innerText = answer.text
-        button.classList.add('btn')
+        const button = document.createElement('button');
+        button.innerText = answer.text;
+        button.classList.add('btn');
         if (answer.correct){
-            button.dataset.correct = answer.correct
+            button.dataset.correct = answer.correct;
         }
-        button.addEventListener('click', selectAnswer)
-        answerButtonsElement.appendChild(button)
-    })
+        button.addEventListener('click', selectAnswer);
+        answerButtonsElement.appendChild(button);
+    });
 }
 function resetState(){
-    clearStatusClass(document.body)
-    nextButton.classList.add('hide')
-    fieldInput.classList.add('hide')
-    //totalScore.style.display = 'none' //HIDE SCORE DIV CONTAINER
+    clearStatusClass(document.body);
+    nextButton.classList.add('hide');
+    fieldInput.classList.add('hide');
     while(answerButtonsElement.firstChild){
-        answerButtonsElement.removeChild( answerButtonsElement.firstChild)
+        answerButtonsElement.removeChild( answerButtonsElement.firstChild);
     }
 }
 function selectAnswer(e){
-    const selectedButton = e.target
-    const correct = selectedButton.dataset.correct
-    setStatusClass(document.body, correct)
+    const selectedButton = e.target;
+    const correct = selectedButton.dataset.correct;
+    setStatusClass(document.body, correct);
     Array.from(answerButtonsElement.children).forEach(button => {
-        setStatusClass(button, button.dataset.correct)
-    })
+        setStatusClass(button, button.dataset.correct);
+    });
     if(shuffledQuestions.length > currentQuestionIndex + 1){
-        nextButton.classList.remove('hide')
+        nextButton.classList.remove('hide');
     } else {
-        startButton.innerText = 'Restart' //RENAME START BUTTON
-        startButton.classList.remove('hide') //SHOW BUTTON
-        highScoreButton.classList.remove('hide') //SHOW HIGH SCORE BUTTON
-        controls.classList.add('add-space') //JUSTIFY CONTENT ON FLEX - THIS WILL SPACE THE BUTTONS
-        fieldInput.classList.remove('hide') // SHOW FIELDSET PAGE
+        startButton.innerText = 'Restart'; //RENAME START BUTTON
+        startButton.classList.remove('hide'); //SHOW BUTTON
+        highScoreButton.classList.remove('hide'); //SHOW HIGH SCORE BUTTON
+        controls.classList.add('add-space'); //JUSTIFY CONTENT ON FLEX - THIS WILL SPACE THE BUTTONS
+        fieldInput.classList.remove('hide'); // SHOW FIELDSET PAGE
     }
     //THIS IS CODE TO FIGURE OUT IF ANSWER IS CORRECT OR WRONG 
     //THIS SCORE IS THEN ADDED TO THE SCORECOUNTER VARIABLE
     if(document.body.classList.contains('correct')){
-        scoreCounter++
-        totalScore.innerText = 'Total Score = '+ scoreCounter
+        scoreCounter++;
+        totalScore.innerText = 'Total Score = '+ scoreCounter;
         //savingFunction('username', scoreCounter)
     } else {
-        scoreCounter -= 1
+        scoreCounter -= 1;
         if(scoreCounter < 0){
-            scoreCounter =0
+            scoreCounter =0;
         }
-        totalScore.innerText = 'Total Score = '+ scoreCounter
+        totalScore.innerText = 'Total Score = '+ scoreCounter;
         //savingFunction('username', scoreCounter)
     } 
 }
 function setStatusClass(element, correct){
-    clearStatusClass(element)
+    clearStatusClass(element);
     if(correct){
-        element.classList.add('correct')
+        element.classList.add('correct');
     } else {
-        element.classList.add('wrong')
+        element.classList.add('wrong');
     }
 }
 function clearStatusClass(element){
-    element.classList.remove('correct')
-    element.classList.remove('wrong')
+    element.classList.remove('correct');
+    element.classList.remove('wrong');
 }
 const questions = [
     {
@@ -188,4 +187,4 @@ const questions = [
             {text: '1176', correct: true}
         ]
     }
-]
+];
