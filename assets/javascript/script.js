@@ -1,7 +1,6 @@
 //game page variables 
 const startButton = document.getElementById('start-btn');
 const nextButton = document.getElementById('next-btn');
-//const highScoreButton = document.getElementById('score-btn');
 const questionContainerElement = document.getElementById('question-container');
 const questionElement = document.getElementById('question');
 const answerButtonsElement = document.getElementById('answer-buttons');
@@ -53,7 +52,6 @@ if(submitButton != null){
 }
 function startGame(){
     startButton.classList.add('hide'); //hide start button
-    //highScoreButton.classList.add('hide'); //hide restart button
     totalScore.classList.remove('hide'); //show score div container
     shuffledQuestions = questions.sort(() => Math.random() - 0.5);
     currentQuestionIndex = 0;
@@ -97,8 +95,7 @@ function selectAnswer(e){
         nextButton.classList.remove('hide');
     } else {
         startButton.innerText = 'Restart'; //rename start button 
-        startButton.classList.remove('hide'); //show button
-        //highScoreButton.classList.remove('hide'); //show high score button 
+        startButton.classList.remove('hide'); //show button 
         controls.classList.add('add-space'); //justify content on flex - allows buttons some space
         fieldInput.classList.remove('hide'); //show fieldset page
     }
