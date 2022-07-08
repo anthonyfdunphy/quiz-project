@@ -38,6 +38,11 @@ My design consisted of 3 seperate linear gradient background - the main backgrou
 ### Wrong background
 ![alt text](https://i.imgur.com/Kbg96h7.png)
 
+## Fonts
+
+I decided to use Helvetica Neue for entirety of the font usage on this project. 
+![alt text](https://i.imgur.com/Mtx2jwS.jpg) 
+
 ## Deployment
 
 The steps I followed for deploying to Github were as follow:
@@ -65,7 +70,9 @@ Chrome and Safari for iPhone
 
 #### Lighthouse
 
-I used Google's open-source, automated tool for improving the performance, quality, and correctness of your web apps. I got the following results from my website review using this tool
+I used Google's open-source, automated tool for improving the performance, quality, and correctness of your web apps. I got the following results from my website review using this tool.
+
+Lighthouse on index.html
 
 ![alt text](https://i.imgur.com/U7GTMBq.png)
 
@@ -85,6 +92,12 @@ I recieved one warning which was in reference to the function saveUserScore. Thi
 
 W3C HTML validator,
 Jigsaw CSS validator
+
+## Credits
+
+
+
+I was helped greatly by the Javascript programming video on the Youtube channel - WebDevSimplified. I found this [video](https://www.youtube.com/watch?v=riDzcEQbX6k&t=494s&ab_channel=WebDevSimplified) the most useful for getting a grounding on game development using Javascript.
 
 
 
