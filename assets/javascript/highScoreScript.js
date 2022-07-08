@@ -12,7 +12,7 @@ function saveUserScore(username, score){
     localStorage.setItem('highscores', JSON.stringify(highscores));
 }
 
-//INPUT CELL VALUE TO TABLE
+//Input cell value to table
 function insertValues(){
 
     const localValue = localStorage.getItem('highscores');
@@ -31,12 +31,6 @@ function insertValues(){
     const finalMarkUp = formattedHighscores.join('');
 
     scoreVal.innerHTML = finalMarkUp;
-
-    // const x = document.getElementById("sample-table").insertRow(0);
-    // const y = x.insertCell(0);
-
-    // const localVal = localStorage.getItem('Username')
-    // y.innerHTML= localVal;
 }
 
 if(scoreClicker != null){

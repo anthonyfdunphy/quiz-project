@@ -13,9 +13,6 @@ const fieldInput = document.getElementById('input-field');
 const inputKey = document.getElementById('inpKey');
 const submitButton = document.getElementById('submit-button');
 
-//high score page variable
-const highScoreText = document.getElementById('score-storage');
-
 // user overall score
 let scoreCounter = 0;
 let shuffledQuestions; 
@@ -32,7 +29,8 @@ if(nextButton != null){
         setNextQuestion();
     });
 }
-//EVENT LISTENER FOR HIGHSCORE BUTTON - LINKS TO HIGH SCORE HTML PAGE
+
+//Event listener for highscore button - links to high score html page
 if (highScoreButton != null){
     highScoreButton.addEventListener('click', () => {
     const highScorePage = "highscore.html";
@@ -67,7 +65,7 @@ function startGame(){
     shuffledQuestions = questions.sort(() => Math.random() - 0.5);
     currentQuestionIndex = 0;
     questionContainerElement.classList.remove('hide');
-    scoreCounter = 0; // reset counter back to 0 for start of gameRESET COUNTER BACK TO 0 FOR START OF GAME
+    scoreCounter = 0; // reset counter back to 0 for start of game
     setNextQuestion();
 }
 function setNextQuestion(){
@@ -105,14 +103,14 @@ function selectAnswer(e){
     if(shuffledQuestions.length > currentQuestionIndex + 1){
         nextButton.classList.remove('hide');
     } else {
-        startButton.innerText = 'Restart'; //RENAME START BUTTON
-        startButton.classList.remove('hide'); //SHOW BUTTON
-        highScoreButton.classList.remove('hide'); //SHOW HIGH SCORE BUTTON
-        controls.classList.add('add-space'); //JUSTIFY CONTENT ON FLEX - THIS WILL SPACE THE BUTTONS
-        fieldInput.classList.remove('hide'); // SHOW FIELDSET PAGE
+        startButton.innerText = 'Restart'; //rename start button 
+        startButton.classList.remove('hide'); //show button
+        highScoreButton.classList.remove('hide'); //show high score button 
+        controls.classList.add('add-space'); //justify content on flex - allows buttons some space
+        fieldInput.classList.remove('hide'); //show fieldset page
     }
-    //THIS IS CODE TO FIGURE OUT IF ANSWER IS CORRECT OR WRONG 
-    //THIS SCORE IS THEN ADDED TO THE SCORECOUNTER VARIABLE
+    //This is code to figure out if answer is correct or wrong
+    //This score is then added to the scorecounter variable
     if(document.body.classList.contains('correct')){
         scoreCounter++;
         totalScore.innerText = 'Total Score = '+ scoreCounter;
