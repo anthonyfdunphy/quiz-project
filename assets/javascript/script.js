@@ -1,7 +1,7 @@
 //game page variables 
 const startButton = document.getElementById('start-btn');
 const nextButton = document.getElementById('next-btn');
-const highScoreButton = document.getElementById('score-btn');
+//const highScoreButton = document.getElementById('score-btn');
 const questionContainerElement = document.getElementById('question-container');
 const questionElement = document.getElementById('question');
 const answerButtonsElement = document.getElementById('answer-buttons');
@@ -22,6 +22,7 @@ let currentQuestionIndex;
 if(startButton != null){
     startButton.addEventListener('click', startGame);
 }
+
 //event listener for next button
 if(nextButton != null){
     nextButton.addEventListener('click', () => {
@@ -30,15 +31,6 @@ if(nextButton != null){
     });
 }
 
-//Event listener for highscore button - links to high score html page
-if (highScoreButton != null){
-    highScoreButton.addEventListener('click', () => {
-    const highScorePage = "highscore.html";
-    window.location.href = highScorePage;
-    });
-}
-
-
 //event listener for submit button
 if(submitButton != null){
     submitButton.addEventListener('click', () =>{
@@ -46,21 +38,22 @@ if(submitButton != null){
     //check if blank spaces are in input key
     if (key.trim() === '') {
         alert('Please enter a username');
+    }else {
+        //add key and value to local storage
+        saveUserScore(key, scoreCounter);
+        insertValues();
+
+        //open high score page when data is submitted
+        const highScorePage = "highscore.html";
+        window.location.href = highScorePage;
+
     }
-
-    //add key and value to local storage
-    saveUserScore(key, scoreCounter);
-    insertValues();
-
-    //open high score page when data is submitted
-    const highScorePage = "highscore.html";
-    window.location.href = highScorePage;
 
     });
 }
 function startGame(){
     startButton.classList.add('hide'); //hide start button
-    highScoreButton.classList.add('hide'); //hide restart button
+    //highScoreButton.classList.add('hide'); //hide restart button
     totalScore.classList.remove('hide'); //show score div container
     shuffledQuestions = questions.sort(() => Math.random() - 0.5);
     currentQuestionIndex = 0;
@@ -105,7 +98,7 @@ function selectAnswer(e){
     } else {
         startButton.innerText = 'Restart'; //rename start button 
         startButton.classList.remove('hide'); //show button
-        highScoreButton.classList.remove('hide'); //show high score button 
+        //highScoreButton.classList.remove('hide'); //show high score button 
         controls.classList.add('add-space'); //justify content on flex - allows buttons some space
         fieldInput.classList.remove('hide'); //show fieldset page
     }
