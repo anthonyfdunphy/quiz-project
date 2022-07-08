@@ -69,13 +69,13 @@ I used Google's open-source, automated tool for improving the performance, quali
 
 ![alt text](https://i.imgur.com/U7GTMBq.png)
 
-#### Lighthouse
+#### JSHint
 
 The Javascript code used on my site was validated using the website JSHint. I found this site to be helpful as it showed some of the error which had cropped up in my code - most of which being missing semicolon's. I found the JSHint tool useful as it also helped me identify older functions I had written at the inception of this project which were now unused.
 
 For my script.js javascript file, I got the following results:
 
-![alt text](blob:https://imgur.com/5f4c2668-537e-44f6-a4ba-86f32a745f64)
+![alt text](https://i.imgur.com/rotx3If.png)
 
 For my highScoreScript.js javascript file, I got the following results:
 
