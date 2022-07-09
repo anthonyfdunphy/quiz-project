@@ -10,12 +10,6 @@
     /*outline: 2px solid limegreen !important;*/
 }
 
-:root{
-    --hue--neutral: 200;
-    --hue--wrong: 0;
-    --hue--correct: 145;
-}
-
 body{
     font-family: HelveticaAnthony;
     display: flex;
@@ -70,10 +64,11 @@ body.wrong{
     border: 1px solid hsl(var(--hue), 100%, 30%);
     background-color: hsl(var(--hue), 100%, 50%);
     border-radius: 5px;
-    padding: 5px 10px;
+    padding: 0.6vh;
     color: white;
     outline: none;
     text-transform: uppercase;
+    font-size: 2vh;
 
     /* GLASS EFFECT */
     background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
@@ -153,13 +148,18 @@ body.wrong{
     align-items: center;
     justify-content: center;
     border-radius: 10px;
-    /* background-color: white; */
     border: 0;  
 }
 
 /* fieldset styling */
 
 #input-field{
+    display: none;
+    row-gap: 0px;
+    column-gap: 1.5vh;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
     border: none;
     background-color: transparent;
     resize: none;
@@ -168,9 +168,6 @@ body.wrong{
 
 /* input box styling */
 #inpKey, #inpVal{
-    /* border: none; */
-    /* outline: none; */
-    /* background-color: transparent; */
     font-family: HelveticaAnthony;
     border-radius: 10px;
     resize: none;
@@ -203,5 +200,18 @@ body.wrong{
     justify-content: space-around;
 }
 
+/* Media Queries */
+/* This is a media query which is aimed at: iPhone 13, iPhone 12 and iPhone 12 Pro */
 
-
+/* @media only screen and (min-width: 390px) and (max-width: 767px) { 
+    #input-field{
+        display: grid;
+    } 
+    #inpKey{
+        margin-top: 1vh;
+        margin-bottom: 1vh;
+    }
+    #score-board{
+        display: flex;
+    }
+} */

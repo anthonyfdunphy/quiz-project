@@ -6,6 +6,7 @@ const questionElement = document.getElementById('question');
 const answerButtonsElement = document.getElementById('answer-buttons');
 const totalScore = document.getElementById('score-board');
 const controls = document.getElementById('controls');
+
 const fieldInput = document.getElementById('input-field');
 
 //input variables
@@ -50,8 +51,10 @@ if(submitButton != null){
 
     });
 }
+
 function startGame(){
     startButton.classList.add('hide'); //hide start button
+    fieldInput.classList.add('hide');
     totalScore.classList.remove('hide'); //show score div container
     shuffledQuestions = questions.sort(() => Math.random() - 0.5);
     currentQuestionIndex = 0;
@@ -59,10 +62,12 @@ function startGame(){
     scoreCounter = 0; // reset counter back to 0 for start of game
     setNextQuestion();
 }
+
 function setNextQuestion(){
     resetState();
     showQuestion(shuffledQuestions[currentQuestionIndex]);
 }
+
 function showQuestion(question){
     questionElement.innerText = question.question;
     question.answers.forEach(answer => {
@@ -76,6 +81,7 @@ function showQuestion(question){
         answerButtonsElement.appendChild(button);
     });
 }
+
 function resetState(){
     clearStatusClass(document.body);
     nextButton.classList.add('hide');
@@ -84,6 +90,7 @@ function resetState(){
         answerButtonsElement.removeChild( answerButtonsElement.firstChild);
     }
 }
+
 function selectAnswer(e){
     const selectedButton = e.target;
     const correct = selectedButton.dataset.correct;
@@ -98,6 +105,7 @@ function selectAnswer(e){
         startButton.classList.remove('hide'); //show button 
         controls.classList.add('add-space'); //justify content on flex - allows buttons some space
         fieldInput.classList.remove('hide'); //show fieldset page
+        fieldInput.style.display = 'flex' //make button layout to be flex 
     }
     //This is code to figure out if answer is correct or wrong
     //This score is then added to the scorecounter variable
@@ -114,6 +122,7 @@ function selectAnswer(e){
         //savingFunction('username', scoreCounter)
     } 
 }
+
 function setStatusClass(element, correct){
     clearStatusClass(element);
     if(correct){
@@ -122,10 +131,12 @@ function setStatusClass(element, correct){
         element.classList.add('wrong');
     }
 }
+
 function clearStatusClass(element){
     element.classList.remove('correct');
     element.classList.remove('wrong');
 }
+
 const questions = [
     {
         question: 'Which of the following is an amplifer manufacturer?',
