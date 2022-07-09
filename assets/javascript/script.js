@@ -6,7 +6,6 @@ const questionElement = document.getElementById('question');
 const answerButtonsElement = document.getElementById('answer-buttons');
 const totalScore = document.getElementById('score-board');
 const controls = document.getElementById('controls');
-
 const fieldInput = document.getElementById('input-field');
 
 //input variables
@@ -54,7 +53,6 @@ if(submitButton != null){
 
 function startGame(){
     startButton.classList.add('hide'); //hide start button
-    fieldInput.classList.add('hide');
     totalScore.classList.remove('hide'); //show score div container
     shuffledQuestions = questions.sort(() => Math.random() - 0.5);
     currentQuestionIndex = 0;
@@ -85,7 +83,8 @@ function showQuestion(question){
 function resetState(){
     clearStatusClass(document.body);
     nextButton.classList.add('hide');
-    fieldInput.classList.add('hide');
+    inputKey.classList.add('hide');
+    submitButton.classList.add('hide');
     while(answerButtonsElement.firstChild){
         answerButtonsElement.removeChild( answerButtonsElement.firstChild);
     }
@@ -104,22 +103,21 @@ function selectAnswer(e){
         startButton.innerText = 'Restart'; //rename start button 
         startButton.classList.remove('hide'); //show button 
         controls.classList.add('add-space'); //justify content on flex - allows buttons some space
-        fieldInput.classList.remove('hide'); //show fieldset page
-        fieldInput.style.display = 'flex' //make button layout to be flex 
+        inputKey.classList.remove('hide');
+        submitButton.classList.remove('hide');
     }
+
     //This is code to figure out if answer is correct or wrong
     //This score is then added to the scorecounter variable
     if(document.body.classList.contains('correct')){
         scoreCounter++;
         totalScore.innerText = 'Total Score = '+ scoreCounter;
-        //savingFunction('username', scoreCounter)
     } else {
         scoreCounter -= 1;
         if(scoreCounter < 0){
             scoreCounter =0;
         }
         totalScore.innerText = 'Total Score = '+ scoreCounter;
-        //savingFunction('username', scoreCounter)
     } 
 }
 
