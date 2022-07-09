@@ -34,7 +34,7 @@ body{
     align-items: center;
     justify-content: center;
     background-color: pink;
-    font-size: 5vh;
+    font-size: 3vh;
     text-transform: uppercase;
 
     background-color: #e7eff9;
@@ -78,6 +78,7 @@ body{
     font-family: HelveticaAnthony;
     text-transform: uppercase;
     cursor: pointer;
+    font-size: 1.8vh;
 }
 
 #score-text{
@@ -89,4 +90,17 @@ body{
 
 .hide{
     display: none;
+}
+
+/* Media Queries */
+
+@media only screen and (max-width: 567px) { 
+    #scoreboard-button{
+        font-size: 1.2vh;
+    }   
+
+    #returnButton{
+        font-size: 2vh;
+    }
+
 }
