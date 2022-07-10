@@ -8,9 +8,9 @@ For the live link - please click [here](https://anthonyfdunphy.github.io/quiz-pr
 
 ## Concept
 
-The user will be brought to a homepage which will give the user the option to start the game. On click, the quiz will begin and the webpage will change. The user will select an answer from 4 possible answers. The style of the button will change colour to indicate a correct or incorrect answer. A status bar will load at the top of the webpage to indicate the number of questions completed. A scoreboard will also be displayed at the top of the page. The user will lose a point for every wrong answer selected.
+The user will be brought to a homepage which will give the user the option to start the game. On click, the quiz will begin and the webpage will change. The user will select an answer from 4 possible answers. The style of the button will change colour to indicate a correct or incorrect answer. The user will lose a point for every wrong answer selected.
 
-When the quiz is completed, the user is given the option to restart the game, click on the button which brings the user to the high scores page or save there score to the high scores page.
+When the quiz is completed, the user is given the option to restart the game, click on the button which brings the user to the high scores page or save the score they have to the high scores page.
 
 ---------------
 
@@ -38,12 +38,44 @@ My design consisted of 3 seperate linear gradient background - the main backgrou
 ### Wrong background
 ![alt text](https://i.imgur.com/Kbg96h7.png)
 
+## User Goals
+1. The website must be responsive - the CSS and HTML code must be able to hide, resize, shrink/enlarge, or move any of the content to adjust for the appropriate screen size.
+2. The navigation of the site must be easy. The user should see that the site has a natural flow to it which is intuitive.
+3. The aim is that the correct and incorrect answers should be displayed clearly for the user.
+4. The user must be able to keep track of their score which is placed in a scoreboard at the end.
+
+## User stories
+From a first-time user perspective
+1. As a first-time user, I want to be able to play the game without lengthly guides or instructions.
+2. As a first-time user, I want to see how I progressing with my score tally.
+3. As a first-time user, I want to be given a visual prompt when I have made the right or wrong guess.
+4. As a first-time user, I want to be able to restart the quiz after I complete it.
+
+First-time user perspective fulfillment
+1. The user with greeted with a basic UI design where they are given the single option to click a 'start button'. This allow for little confusion or prompts needing to be given to a first-time user. 
+
+![alt text](https://i.imgur.com/lRliB9H.png)
+
+2. The user is given a clear score total at the bottom of the div container which shows the total score they have achieved so far.
+
+![alt text](https://i.imgur.com/AHNjGdx.png)
+
+3. The background color of the body changes color depending on which answer a user selects. If the answer if correct, the background is a green gradient, if the answer is wrong, the background gradient is red. Below is an example of a user selecting an incorrect answer. This fulfils the visual prompt a first time user would need.
+
+![alt text](https://i.imgur.com/LxJSBNT.png)
+
+4. At the end of the quiz, the user is given a restart button which allows them to restart the game from the beginning.
+
+![alt text](https://i.imgur.com/11IZn3Z.png)
+
 ## Fonts
 
-I decided to use Helvetica Neue for entirety of the font usage on this project. 
+I decided to use Helvetica Neue for entirety of the font usage on this project.
+
 ![alt text](https://i.imgur.com/Mtx2jwS.jpg) 
 
-## Deployment
+
+### Deployment
 
 The steps I followed for deploying to Github were as follow:
 
@@ -53,18 +85,9 @@ The steps I followed for deploying to Github were as follow:
 4. User Gitpod edit the files
 5. Created a HTML file, a CSS file and a Javascript - some of which sat within an assets folder which helped for organising the file structure
 
-## Testing
-
-*This is placeholder text until the site is complete*. Testing during coding took place by refreshing the browser preview in Chrome and playing through the quiz, including using the restart button to check that the quiz reloaded properly, after each significant new section of code was written.
-
-### Manual Testing
-External links have all been tested, to check that each link opens correctly and opens in a new browser.
-Both correct and incorrect answers to all questions have been selected, to check that both function as intended.
 
 ### Device and Cross-Browser Testing
-The quiz has been tested by playing it through on a range of browsers and devices, including:
-Chrome, Firefox and Edge on a laptop
-Chrome and Safari for iPhone
+The quiz has been tested by playing it through on a range of browsers and devices. I used the online tool LambdaTest to check different browser version on different operating system.
 
 ### Validator Testing
 
