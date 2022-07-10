@@ -8,7 +8,7 @@ For the live link - please click [here](https://anthonyfdunphy.github.io/quiz-pr
 
 ## Concept
 
-The user will be brought to a homepage which will give the user the option to start the game. On click, the quiz will begin and the webpage will change. The user will select an answer from 4 possible answers. The style of the button will change colour to indicate a correct or incorrect answer. The user will lose a point for every wrong answer selected.
+This is an audio equipment related quiz project. The user will be brought to a homepage which will give the user the option to start the game. On click, the quiz will begin and the webpage will change. The user will select an answer from 4 possible answers. The style of the button will change colour to indicate a correct or incorrect answer. The user will lose a point for every wrong answer selected.
 
 When the quiz is completed, the user is given the option to restart the game or save the score they have to the high scores page.
 
