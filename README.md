@@ -76,6 +76,10 @@ Lighthouse on index.html
 
 ![alt text](https://i.imgur.com/U7GTMBq.png)
 
+Lighthouse on highscore.html
+
+![alt text](https://i.imgur.com/me1vWEQ.png)
+
 #### JSHint
 
 The Javascript code used on my site was validated using the website JSHint. I found this site to be helpful as it showed some of the error which had cropped up in my code - most of which being missing semicolon's. I found the JSHint tool useful as it also helped me identify older functions I had written at the inception of this project which were now unused.
@@ -90,8 +94,25 @@ For my highScoreScript.js javascript file, I got the following results:
 
 I recieved one warning which was in reference to the function saveUserScore. This function is called from the script.js file which runs most of the game. I could have made it a global function but after consulting with the Code Institue tutors, they mentioned that this was not neccessary. 
 
-W3C HTML validator,
-Jigsaw CSS validator
+#### HTML validator
+
+I checked the HTML code for the index page and the highscore page. No errors were shown on either of the html pages - below are screenshots of both page results:
+
+Index.html
+![alt text](https://i.imgur.com/EBXiack.png)
+
+Highscore.html
+![alt text](https://i.imgur.com/oLLTWoY.png)
+
+#### Jigsaw CSS validator
+
+I used the online tool Jigsaw CSS to validate the code for my stylsheets for my quiz project. Below are the screenshots of both error free codes submitted:
+
+Index.html
+![alt text](https://i.imgur.com/W8dQacc.png)
+
+Highscore.html
+![alt text](https://i.imgur.com/YpRhSbd.png)
 
 ## Credits
 
