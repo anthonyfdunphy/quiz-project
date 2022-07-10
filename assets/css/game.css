@@ -7,7 +7,6 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    /*outline: 2px solid limegreen !important;*/
 }
 
 body{
@@ -39,6 +38,7 @@ body.wrong{
     padding: 10px;
     border-radius: 5px;
     box-shadow: 0 0 10px 2px;
+
     /* GLASS EFFECT */
     background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
     backdrop-filter: blur(10px);
@@ -113,7 +113,6 @@ body.wrong{
 }
 
 #score-board{
-    /* display: none; */
     justify-content: center;
     text-transform: uppercase;
     padding: 20px 10px 10px 10px;

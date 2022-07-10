@@ -103,8 +103,8 @@ function selectAnswer(e){
         startButton.innerText = 'Restart'; //rename start button 
         startButton.classList.remove('hide'); //show button 
         controls.classList.add('add-space'); //justify content on flex - allows buttons some space
-        inputKey.classList.remove('hide');
-        submitButton.classList.remove('hide');
+        inputKey.classList.remove('hide'); //input key
+        submitButton.classList.remove('hide'); //show submit button
     }
 
     //This is code to figure out if answer is correct or wrong

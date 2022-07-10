@@ -12,7 +12,7 @@ function saveUserScore(username, score){
     localStorage.setItem('highscores', JSON.stringify(highscores));
 }
 
-//Input cell value to table
+//input cell value to table
 function insertValues(){
 
     const localValue = localStorage.getItem('highscores');
